@@ -14,7 +14,9 @@
 
 <div class="container">
     IAB Test Page <br /><br />
-    <button onclick="postMessage('Hello from IAB')">Send Message To Ionic App</button>
+    <button onclick="postMessage({
+        message: 'Hello from IAB'
+    })">Send Message To Ionic App</button>
 </div>
 
 </body>
