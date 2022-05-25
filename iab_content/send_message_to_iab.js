@@ -1,3 +1,1 @@
-document.getElementById('executeScriptButton').addEventListener('click', postMessage());
-
-
+document.getElementById('executeScriptButton').onclick = postMessage();
