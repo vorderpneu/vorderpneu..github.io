@@ -5,24 +5,3 @@ function postMessage(){
         message: message
     }));
 }
-
-window.addEventListener("message", (event) => {
-    // Do we trust the sender of this message?
-    setTimeout(() => {
-        console.log(event.origin);
-        if (event.origin !== "http://localhost")
-            return;
-
-        // event.source is window.opener
-        // event.data is "hello there!"
-
-        // Assuming you've verified the origin of the received message (which
-        // you must do in any case), a convenient idiom for replying to a
-        // message is to call postMessage on event.source and provide
-        // event.origin as the targetOrigin.
-        event.source.postMessage("hi there yourself!  the secret response " +
-            "is: rheeeeet!",
-            event.origin);
-    }, 5000);
-
-}, false);
