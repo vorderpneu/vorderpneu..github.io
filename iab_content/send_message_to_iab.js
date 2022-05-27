@@ -1,1 +1,1 @@
-document.getElementById('executeScriptRemoteButton').onclick = postMessage();
+document.getElementById('executeScriptRemoteButton').onclick = postMessage;
