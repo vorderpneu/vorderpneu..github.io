@@ -13,7 +13,9 @@ window.addEventListener('touchend', (event) => {
     postMessage('resetTimer');
 });
 
-window.addEventListener('input', (evt) => {
-    console.log('input event');
+const selectElement = document.querySelector('messageInput');
+
+selectElement.addEventListener('change', (evt) => {
+    console.log('input change event');
     postMessage('resetTimer');
 });
