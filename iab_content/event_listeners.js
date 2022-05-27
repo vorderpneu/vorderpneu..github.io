@@ -3,9 +3,9 @@ window.addEventListener('click', (event) => {
 });
 
 window.addEventListener('keypress', (event) => {
-    console.log('resetTimer');
+    postMessage('resetTimer')
 });
 
 window.addEventListener('touchend', (event) => {
-    console.log('resetTimer');
+    postMessage('resetTimer')
 });
