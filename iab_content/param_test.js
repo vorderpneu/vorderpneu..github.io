@@ -1,14 +1,4 @@
-var MYLIBRARY = MYLIBRARY || (function(){
-    var _args = {}; // private
-
-    return {
-        init : function(Args) {
-            _args = Args;
-            // some other initialising
-            alert('Hello World! -' + _args[0]);
-        },
-        helloWorld : function() {
-            alert('Hello World! -' + _args[0]);
-        }
-    };
-}());
+var scripts = document.getElementsByTagName('script');
+var jsFile = new URL("http://" + scripts[scripts.length-1].attributes.src.value);
+/*get value from query parameters*/
+console.log(jsFile.searchParams.get("param"));
