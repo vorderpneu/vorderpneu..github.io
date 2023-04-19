@@ -5,3 +5,19 @@ function postMessage(message) {
         message: message
     }));
 }
+
+function closeIAM() {
+            let message = {
+                iabMessageType: 'receive-iab-message',
+                value: 'reload'
+            };
+            window.webkit.messageHandlers.cordova_iab.postMessage(JSON.stringify(message));
+
+    message = {
+        iabMessageType: 'receive-iab-message',
+        value: 'close',
+        origin: window.location.href
+    };
+    window.webkit.messageHandlers.cordova_iab.postMessage(JSON.stringify(message));
+
+}
